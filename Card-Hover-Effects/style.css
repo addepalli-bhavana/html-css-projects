@@ -1,0 +1,436 @@
+/* Body */
+body {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+/* Header */
+header {
+  padding: 1.875rem;
+  padding-bottom: 2.1875rem;
+  background: linear-gradient(to right, #008b8b, #e0ffff);
+  box-shadow: 0 0.3125rem 0.625rem rgba(0, 0, 0, 0.3);
+}
+header h1 {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  background: linear-gradient(to right, #ff00ff, #00008b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 0.5rem;
+  animation: animate-heading 1s linear infinite;
+}
+@keyframes animate-heading {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(-360deg);
+  }
+}
+header p {
+  color: #00008b;
+  font-size: 1.125rem;
+  letter-spacing: 0.0625rem;
+}
+@media screen and (max-width: 48rem) {
+  header h1 {
+    font-size: 2.1875rem;
+  }
+  header p {
+    font-size: 1rem;
+  }
+}
+
+/* Main Content */
+main {
+  margin: 2.5rem;
+}
+
+/* Cards Container */
+.cards-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.card {
+  color: #fff;
+  width: 21.875rem;
+  height: 31.25rem;
+  position: relative;
+  overflow: hidden;
+}
+.card h1 {
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 1.5625rem;
+}
+.card p {
+  font-size: 1rem;
+  text-transform: capitalize;
+  margin: 0.625rem;
+}
+.card a {
+  text-decoration: none;
+  background-color: #fff;
+  color: #000;
+  padding: 0.75rem 0.9375rem;
+  border-radius: 0.3125rem;
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+}
+img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+}
+
+/* Card 1 */
+.caption-one {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: all 0.5s;
+}
+.card-one:hover .caption-one {
+  opacity: 1;
+}
+.card-one:hover .img-one {
+  transform: scale(1.3) rotate(13deg);
+}
+
+/* Card 2 */
+.caption-two {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: translateX(-100%);
+  transition: all 0.5s;
+}
+.card-two:hover .caption-two {
+  transform: translateX(0);
+}
+.card-two:hover .img-two {
+  transform: scale(1.4) rotate(-15deg);
+}
+
+/* Card 3 */
+.caption-three {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #008b8b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-100%);
+  transition: all 0.5s;
+}
+.card-three:hover .caption-three {
+  transform: translateY(0);
+}
+.card-three:hover .img-three {
+  transform: translateY(100%);
+}
+
+/* Card 4 */
+.caption-four {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 25%;
+  width: 100%;
+  background-color: #008b8b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(100%);
+  transition: all 0.5s;
+}
+.card-four:hover .caption-four {
+  transform: translateY(0);
+}
+.card-four:hover .img-four {
+  transform: translateY(-25%);
+  filter: brightness(50%);
+}
+
+/* Card 5 */
+.card-five:hover .img-five {
+  transform: scale(1.5) rotate(20deg);
+}
+
+/* Card 6 */
+.card-six::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 200%;
+  width: 200%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: translate(21.875rem, 31.25rem) rotate(45deg);
+  transition: all 0.5s;
+}
+.card-six:hover::before {
+  transform: translate(-10.9375rem, -15.625rem) rotate(45deg);
+}
+.caption-six {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.caption-six p {
+  transform: translateY(18.75rem);
+  transition: all 0.5s;
+  line-height: 1.4;
+}
+.caption-six h1 {
+  transform: translateY(-15.625rem);
+  transition: all 0.5s;
+}
+.caption-six a {
+  transform: translateY(21.875rem);
+  transition: all 0.5s;
+}
+.card-six:hover .caption-six h1 {
+  transform: translateY(0);
+}
+.card-six:hover .caption-six p {
+  transform: translateY(0);
+}
+.card-six:hover .caption-six a {
+  transform: translateY(0);
+}
+
+/* Card 7 */
+.card-seven:hover .img-seven {
+  transform: rotate(720deg) scale(0);
+}
+.caption-seven {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+}
+.caption-seven p {
+  transform: translateY(18.75rem);
+  transition: all 0.5s;
+  line-height: 1.4;
+}
+.caption-seven h1 {
+  transform: translateY(-15.625rem);
+  transition: all 0.5s;
+}
+.caption-seven a {
+  color: #008b8b;
+  transform: translateY(21.875rem);
+  transition: all 0.5s;
+}
+.card-seven:hover .caption-seven h1 {
+  transform: translateY(0);
+}
+.card-seven:hover .caption-seven p {
+  transform: translateY(0);
+}
+.card-seven:hover .caption-seven a {
+  transform: translateY(0);
+}
+.card-seven:hover .caption-seven {
+  background-color: #008b8b;
+}
+
+/* Card 8 */
+.card-side {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition: all 1.5s linear;
+  backface-visibility: hidden;
+}
+.card-back {
+  background-color: #008b8b;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  transform: rotateY(180deg);
+}
+.card-back a {
+  color: #008b8b;
+}
+.card-eight p {
+  line-height: 1.4;
+}
+.card:hover .card-front {
+  transform: rotateY(-180deg);
+}
+.card:hover .card-back {
+  transform: rotateY(0);
+}
+
+/* Card 9  */
+.card-nine::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0.25rem solid #fff;
+  opacity: 0;
+  transition: 0.5s all;
+}
+.card-nine:hover::before {
+  transform: scale(0.8);
+  opacity: 1;
+  z-index: 1;
+}
+.caption-nine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s;
+}
+.card-nine:hover .caption-nine {
+  opacity: 1;
+}
+
+/* Card 10 */
+.card-ten {
+  box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.2);
+}
+.card-ten::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -99%;
+  height: 100%;
+  width: 100%;
+  background-color: #008b8b;
+  transition: all 0.5s;
+}
+.card-ten:hover::before {
+  bottom: 0;
+}
+.caption-ten {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  color: #008b8b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: all 0.5s;
+}
+.caption-ten p {
+  line-height: 1.4;
+}
+.caption-ten a {
+  color: #fff;
+  background-color: #008b8b;
+  transition: all 0.5s;
+}
+.card-ten:hover a {
+  background-color: #fff;
+  color: #008b8b;
+}
+.card-ten:hover .caption-ten {
+  color: #fff;
+}
+
+/* Card 11 */
+.card-eleven {
+  box-shadow: 0rem 1.875rem 1.875rem rgba(0, 0, 0, 0.5);
+}
+.caption-eleven {
+  position: absolute;
+  top: 79%;
+  left: 0rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  background-color: #008b8b;
+  padding-top: 2.5rem;
+  transition: all 0.5s;
+}
+.card-eleven:hover .caption-eleven {
+  top: 0;
+  justify-content: center;
+  padding-top: 0;
+}
+.caption-eleven p {
+  line-height: 1.4;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.caption-eleven a {
+  color: #008b8b;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.card-eleven:hover .caption-eleven p {
+  opacity: 1;
+  transition-delay: 0.3s;
+}
+.card-eleven:hover .caption-eleven a {
+  opacity: 1;
+  transition-delay: 0.3s;
+}

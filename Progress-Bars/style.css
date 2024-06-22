@@ -1,0 +1,160 @@
+/* Body */
+body {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+/* Header */
+header {
+  padding: 1.875rem;
+  padding-bottom: 2.1875rem;
+  background: linear-gradient(to right, #0000ff, #ff0000);
+  box-shadow: 0 0.3125rem 0.625rem rgba(0, 0, 0, 0.3);
+}
+header h1 {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  background: linear-gradient(to right, #f2291b, #f7db25, #84f527);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 0.5rem;
+  animation: animate-heading 1s linear infinite;
+}
+@keyframes animate-heading {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(-360deg);
+  }
+}
+@media screen and (max-width: 48rem) {
+  header h1 {
+    font-size: 2.1875rem;
+  }
+}
+
+/* Progress Bars Container */
+.progress-bars-container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.progress-bar-container {
+  padding: 3.125rem;
+  border: 0.125rem solid #9932cc4d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circular-progress-bar {
+  height: 12.5rem;
+  width: 12.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.circular-progress-bar::before {
+  content: "";
+  height: 80%;
+  width: 80%;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.circular-percentage {
+  z-index: 1;
+  font-size: 1.25rem;
+}
+.rectangular-progress-bar {
+  width: 31.25rem;
+  height: 1.25rem;
+  border-radius: 0.625rem;
+  position: relative;
+}
+.rectangular-percentage {
+  text-align: center;
+  font-size: 0.9375rem;
+  line-height: 1.3;
+}
+.rectangular-progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 100%;
+  border-radius: 0.625rem;
+  z-index: -1;
+}
+@media screen and (max-width: 37.5rem) {
+  .rectangular-progress-bar {
+    width: 21.875rem;
+  }
+}
+
+/* Progress Bar 1 */
+.progress-bar-1 {
+  background: conic-gradient(#3498db 0deg, #cfcdcd 0);
+}
+.percentage-1 {
+  color: #004d80;
+}
+
+/* Progress Bar 2 */
+.progress-bar-2 {
+  background: conic-gradient(#ff0000 0deg, #cfcdcd 0);
+}
+.percentage-2 {
+  color: #ff0000;
+}
+
+/* Progress Bar 3 */
+.progress-bar-3 {
+  border: 0.0625rem solid #0000ff;
+}
+.percentage-3 {
+  color: #0000ff;
+}
+.progress-3 {
+  background-color: #0000ff;
+}
+
+/* Progress Bar 4 */
+.progress-bar-4 {
+  border: 0.0625rem solid #000000;
+}
+.percentage-4 {
+  color: #000000;
+}
+.progress-4 {
+  background: linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.8) 25%,
+    rgba(0, 0, 0, 0.6) 25%,
+    rgba(0, 0, 0, 0.6) 50%,
+    rgba(0, 0, 0, 0.8) 50%,
+    rgba(0, 0, 0, 0.8) 75%,
+    rgba(0, 0, 0, 0.6) 75%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+}
+
+/* Progress Bar 5 */
+.progress-bar-5 {
+  border: 0.0625rem solid #006400;
+}
+.percentage-5 {
+  color: #006400;
+}
+.progress-5 {
+  background: linear-gradient(45deg, #00ff00, #3498db);
+}
